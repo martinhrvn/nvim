@@ -11,5 +11,7 @@ return {
   { import = "astrocommunity.editing-support.nvim-treesitter-context" },
   { import = "astrocommunity.colorscheme.dracula-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.harpoon" },
   -- import/override with your plugins folder
 }
