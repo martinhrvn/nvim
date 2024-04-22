@@ -1,4 +1,3 @@
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
 
@@ -7,9 +6,7 @@ return {
 
   -- == Examples of Adding Plugins ==
 
-  { "ThePrimeagen/vim-be-good",
-    lazy = false
-  },
+  { "ThePrimeagen/vim-be-good", lazy = false },
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
@@ -21,12 +18,13 @@ return {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-      require("nvim-surround").setup({
+      require("nvim-surround").setup {
         -- Configuration here, or leave empty to use defaults
-      })
-    end
+      }
+    end,
   },
   "andweeb/presence.nvim",
+  { "rafamadriz/friendly-snippets" },
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
@@ -63,6 +61,7 @@ return {
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
     "L3MON4D3/LuaSnip",
+    dependencies = { "rafamadriz/friendly-snippets" },
     config = function(plugin, opts)
       require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
       -- add more custom luasnip configuration such as filetype extend or custom snippets
