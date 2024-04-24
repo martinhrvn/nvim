@@ -13,5 +13,10 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.pack.kotlin" },
+  { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.elixir-phoenix" },
+  { import = "astrocommunity.pack.terraform" },
+  { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
   -- import/override with your plugins folder
 }

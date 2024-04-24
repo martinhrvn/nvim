@@ -7,6 +7,30 @@ return {
   -- == Examples of Adding Plugins ==
 
   { "ThePrimeagen/vim-be-good", lazy = false },
+
+  {
+    "smoka7/hop.nvim",
+    opts = {},
+    dependencies = {
+      "AstroNvim/astrocore",
+      opts = {
+        mappings = {
+          n = {
+            ["<leader><leader>w"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
+            ["<leader><leader>j"] = { function() require("hop").hint_lines() end, desc = "Hop hint lines" },
+            ["<leader><leader>s"] = { function() require("hop").hint_patterns() end, desc = "Hop hint patterns" },
+          },
+          v = {
+            ["s"] = { function() require("hop").hint_words { extend_visual = true } end, desc = "Hop hint words" },
+            ["<S-s>"] = {
+              function() require("hop").hint_lines { extend_visual = true } end,
+              desc = "Hop hint lines",
+            },
+          },
+        },
+      },
+    },
+  },
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
