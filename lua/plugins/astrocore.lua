@@ -40,6 +40,9 @@ return {
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
+      i = {
+        ["<C-k>"] = { function() require("luasnip").expand() end, silent = true },
+      },
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
@@ -62,6 +65,12 @@ return {
           end,
           desc = "Pick to close",
         },
+
+        -- Overseer shortcuts
+        ["<Leader>to"] = { ":OverseerToggle right<CR>", desc = "Overseer Toggle" },
+        ["<Leader>tr"] = { ":OverseerRun<CR>", desc = "Overseer Run" },
+        ["<Leader>tt"] = { ":OverseerTaskAction<CR>", desc = "Overseer Quick Action" },
+
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },

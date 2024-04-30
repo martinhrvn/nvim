@@ -46,6 +46,24 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      ["emmet-ls"] = {
+        filetypes = {
+          "astro",
+          "css",
+          "eruby",
+          "html",
+          "heex",
+          "htmldjango",
+          "javascriptreact",
+          "less",
+          "pug",
+          "sass",
+          "scss",
+          "svelte",
+          "typescriptreact",
+          "vue",
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {

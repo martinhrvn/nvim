@@ -69,6 +69,7 @@ return {
       require("dbee").setup(--[[optional config]])
     end,
   },
+
   -- == Examples of Overriding Plugins ==
 
   -- customize alpha options
@@ -105,6 +106,7 @@ return {
       -- add more custom luasnip configuration such as filetype extend or custom snippets
       local luasnip = require "luasnip"
       luasnip.filetype_extend("javascript", { "javascriptreact" })
+      require("luasnip/loaders/from_vscode").load()
     end,
   },
 
