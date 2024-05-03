@@ -70,6 +70,7 @@ return {
         ["<Leader>to"] = { ":OverseerToggle right<CR>", desc = "Overseer Toggle" },
         ["<Leader>tr"] = { ":OverseerRun<CR>", desc = "Overseer Run" },
         ["<Leader>tt"] = { ":OverseerTaskAction<CR>", desc = "Overseer Quick Action" },
+        ["<Leader>te"] = { function() require("astrocore").toggle_term_cmd "iex -S mix" end, desc = "IEx" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus

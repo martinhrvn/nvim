@@ -18,5 +18,6 @@ return {
   { import = "astrocommunity.pack.elixir-phoenix" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
+  { import = "astrocommunity.project.nvim-spectre" },
   -- import/override with your plugins folder
 }
