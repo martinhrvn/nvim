@@ -15,7 +15,7 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
-if vim.g.neovide then vim.o.guifont = "JetBrainsMono Nerd Font:h10, JetBrainsMonoNLNerdFontMono-Regular:h14" end
+if vim.g.neovide then vim.o.guifont = "JetBrainsMono Nerd Font, JetBrainsMonoNLNerdFontMono-Regular:h10" end
 
 require "lazy_setup"
 require "polish"

@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -46,14 +44,14 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      ["emmet-ls"] = {
+      ["emmet_ls"] = {
         filetypes = {
           "astro",
           "css",
           "eruby",
           "html",
-	  "heex",
-	  "elixir",
+          "heex",
+          "elixir",
           "eelixir",
           "htmldjango",
           "javascriptreact",
