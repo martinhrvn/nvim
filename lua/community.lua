@@ -19,5 +19,13 @@ return {
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
   { import = "astrocommunity.project.nvim-spectre" },
+  { import = "astrocommunity.test.neotest" },
+  { import = "astrocommunity.file-explorer.oil-nvim" },
+  { import = "astrocommunity.workflow.hardtime-nvim" },
+  { import = "astrocommunity.motion.mini-ai" },
+  { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.split-and-window.mini-map" },
+  { import = "astrocommunity.file-explorer.mini-files" },
+  { import = "astrocommunity.startup.mini-starter" },
   -- import/override with your plugins folder
 }

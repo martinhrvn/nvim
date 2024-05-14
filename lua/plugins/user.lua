@@ -7,48 +7,13 @@ return {
   -- == Examples of Adding Plugins ==
 
   { "ThePrimeagen/vim-be-good", lazy = false },
-
-  {
-    "smoka7/hop.nvim",
-    opts = {},
-    dependencies = {
-      "AstroNvim/astrocore",
-      opts = {
-        mappings = {
-          n = {
-            ["<leader><leader>w"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
-            ["<leader><leader>j"] = { function() require("hop").hint_lines() end, desc = "Hop hint lines" },
-            ["<leader><leader>s"] = { function() require("hop").hint_patterns() end, desc = "Hop hint patterns" },
-          },
-          v = {
-            ["s"] = { function() require("hop").hint_words { extend_visual = true } end, desc = "Hop hint words" },
-            ["<S-s>"] = {
-              function() require("hop").hint_lines { extend_visual = true } end,
-              desc = "Hop hint lines",
-            },
-          },
-        },
-      },
-    },
-  },
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "User AstroFile",
     opts = { suggestion = { auto_trigger = true, debounce = 150 } },
   },
-  {
-    "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup {
-        -- Configuration here, or leave empty to use defaults
-      }
-    end,
-  },
-  "andweeb/presence.nvim",
-  { "rafamadriz/friendly-snippets" },
+
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
@@ -69,35 +34,7 @@ return {
       require("dbee").setup(--[[optional config]])
     end,
   },
-
-  -- == Examples of Overriding Plugins ==
-
-  -- customize alpha options
-  {
-    "goolord/alpha-nvim",
-    opts = function(_, opts)
-      -- customize the dashboard header
-      opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
-      }
-      return opts
-    end,
-  },
-
-  -- You can disable default plugins as follows:
-  { "max397574/better-escape.nvim", enabled = false },
-
-  -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
+  { "echasnovski/mini.sessions", config = function() require("mini.sessions").setup() end },
   {
     "L3MON4D3/LuaSnip",
     dependencies = { "rafamadriz/friendly-snippets" },
@@ -107,6 +44,17 @@ return {
       local luasnip = require "luasnip"
       luasnip.filetype_extend("javascript", { "javascriptreact" })
       require("luasnip/loaders/from_vscode").load()
+    end,
+  },
+  {
+    "nvim-neotest/neotest-jest",
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencise = { "nvim-neotest/neotest-jest" },
+    opts = function(_, opts)
+      if not opts.adapters then opts.adapters = {} end
+      table.insert(opts.adapters, require "neotest-jest"(require("astrocore").plugin_opts "neotest-jest"))
     end,
   },
 
