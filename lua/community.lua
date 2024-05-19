@@ -11,7 +11,6 @@ return {
   { import = "astrocommunity.editing-support.nvim-treesitter-context" },
   { import = "astrocommunity.colorscheme.dracula-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.docker" },
@@ -23,9 +22,11 @@ return {
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.motion.mini-ai" },
+  { import = "astrocommunity.motion.mini-bracketed" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.split-and-window.mini-map" },
   { import = "astrocommunity.file-explorer.mini-files" },
   { import = "astrocommunity.startup.mini-starter" },
+  { import = "astrocommunity.motion.mini-basics" },
   -- import/override with your plugins folder
 }
