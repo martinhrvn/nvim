@@ -41,7 +41,10 @@ return {
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
       i = {
-        ["<C-k>"] = { function() require("luasnip").expand() end, silent = true },
+        ["C-k"] = { "<Up>" },
+        ["C-j"] = { "<Down>" },
+        ["C-h"] = { "<Left>" },
+        ["C-l"] = { "<Right>" },
       },
       -- first key is the mode
       n = {
@@ -77,11 +80,10 @@ return {
         ["<Leader>b"] = { desc = "Buffers" },
         ["<C-u>"] = { "<C-u>zz", noremap = true },
         ["<C-d>"] = { "<C-d>zz", noremap = true },
-        -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-        --
+        ["J"] = { "4j" },
+        ["K"] = { "4k" },
+        ["<C-k>"] = { function() vim.lsp.buf.hover() end },
       },
-
       t = {
         -- setting a mapping to false will disable it
         -- ["<esc>"] = false,

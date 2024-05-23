@@ -21,6 +21,7 @@ return {
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
+  { import = "astrocommunity.workflow.precognition-nvim" },
   { import = "astrocommunity.motion.mini-ai" },
   { import = "astrocommunity.motion.mini-bracketed" },
   { import = "astrocommunity.motion.mini-surround" },
