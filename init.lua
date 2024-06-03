@@ -18,7 +18,7 @@ end
 if vim.g.neovide and vim.fn.has "mac" == 1 then
   vim.o.guifont = "JetBrainsMono Nerd Font:h14"
 elseif vim.g.neovide then
-  vim.o.guifont = "JetBrainsMonoNLNerdFontMono-Regular:h10"
+  vim.o.guifont = "JetBrainsMonoNL Nerd Font:h10"
 end
 
 require "lazy_setup"

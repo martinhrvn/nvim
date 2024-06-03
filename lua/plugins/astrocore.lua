@@ -82,7 +82,6 @@ return {
         ["<C-d>"] = { "<C-d>zz", noremap = true },
         ["J"] = { "4j" },
         ["K"] = { "4k" },
-        ["<C-k>"] = { function() vim.lsp.buf.hover() end },
       },
       t = {
         -- setting a mapping to false will disable it

@@ -5,7 +5,6 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
   { import = "astrocommunity.editing-support.nvim-treesitter-context" },
@@ -16,6 +15,8 @@ return {
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.elixir-phoenix" },
   { import = "astrocommunity.pack.terraform" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.test.neotest" },
