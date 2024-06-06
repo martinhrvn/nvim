@@ -8,6 +8,15 @@ return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
+    autocmds = {
+      minifiles = {
+        {
+          event = "User",
+          pattern = "MiniFilesWindowUpdate",
+          callback = function(args) vim.wo[args.data.win_id].number = true end,
+        },
+      },
+    },
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 500, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
@@ -74,6 +83,10 @@ return {
         ["<Leader>tr"] = { ":OverseerRun<CR>", desc = "Overseer Run" },
         ["<Leader>tt"] = { ":OverseerTaskAction<CR>", desc = "Overseer Quick Action" },
         ["<Leader>te"] = { function() require("astrocore").toggle_term_cmd "iex -S mix" end, desc = "IEx" },
+        ["<Leader>E"] = {
+          function() require("mini.files").open(vim.api.nvim_buf_get_name(0)) end,
+          desc = "Open current directory in mini files",
+        },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
