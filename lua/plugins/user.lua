@@ -35,6 +35,7 @@ return {
     end,
   },
   { "echasnovski/mini.sessions", config = function() require("mini.sessions").setup() end },
+  { "echasnovski/mini.ai", config = function() require("mini.ai").setup { custom_textobjects = { t = false } } end },
   {
     "L3MON4D3/LuaSnip",
     dependencies = { "rafamadriz/friendly-snippets" },
