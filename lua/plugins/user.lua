@@ -13,6 +13,10 @@ return {
     event = "User AstroFile",
     opts = { suggestion = { auto_trigger = true, debounce = 150 } },
   },
+  {
+    "natecraddock/workspaces.nvim",
+    config = function() require("workspaces").setup() end,
+  },
 
   {
     "ray-x/lsp_signature.nvim",
