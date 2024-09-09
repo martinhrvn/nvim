@@ -11,6 +11,7 @@ return {
   { import = "astrocommunity.colorscheme.dracula-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.elixir-phoenix" },
