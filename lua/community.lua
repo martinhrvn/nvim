@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.editing-support.nvim-treesitter-context" },
   { import = "astrocommunity.colorscheme.dracula-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.pack.kotlin" },
@@ -35,5 +36,6 @@ return {
   { import = "astrocommunity.file-explorer.mini-files" },
   { import = "astrocommunity.startup.mini-starter" },
   { import = "astrocommunity.motion.mini-basics" },
+  { import = "astrocommunity.utility.telescope-fzy-native-nvim" },
   -- import/override with your plugins folder
 }
