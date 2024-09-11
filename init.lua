@@ -8,10 +8,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.opt.undofile = true -- Enable persistent undo
-vim.opt.undodir = "~/.vim/undodir" -- Set the directory for undo files
+vim.opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
 -- validate that lazy is available
 if not pcall(require, "lazy") then
   -- stylua: ignore
+  --
+  --
+  --
   vim.api.nvim_echo({ { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } }, true, {})
   vim.fn.getchar()
   vim.cmd.quit()
