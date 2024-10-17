@@ -87,7 +87,7 @@ return {
           function() require("mini.files").open(vim.api.nvim_buf_get_name(0)) end,
           desc = "Open current directory in mini files",
         },
-
+        -- ["<Leader>ff"] = { ":Telescope frecency workspace=CWD<CR>", desc = "Recent history" },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
